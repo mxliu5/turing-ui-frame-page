@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础应用框架</title>
+    <script crossorigin="">import('./assets/index-f30f1b4a.js').finally(() => {
+            
+    const qiankunLifeCycle = window.moudleQiankunAppLifeCycles && window.moudleQiankunAppLifeCycles['skybox-base'];
+    if (qiankunLifeCycle) {
+      window.proxy.vitemount((props) => qiankunLifeCycle.mount(props));
+      window.proxy.viteunmount((props) => qiankunLifeCycle.unmount(props));
+      window.proxy.vitebootstrap(() => qiankunLifeCycle.bootstrap());
+      window.proxy.viteupdate((props) => qiankunLifeCycle.update(props));
+    }
+  
+          })</script>
+    <link rel="modulepreload" crossorigin="" href="./assets/vendor-47c5f7a7.js">
+    <link rel="stylesheet" href="./assets/vendor-742062e8.css">
+    <link rel="stylesheet" href="./assets/index-267dfed9.css">
+  </head>
+  <body>
+    <div id="app" class="turing-ui-frame"></div>
+    
+  
+
+<script>
+  const createDeffer = (hookName) => {
+    const d = new Promise((resolve, reject) => {
+      window.proxy && (window.proxy[`vite${hookName}`] = resolve)
+    })
+    return props => d.then(fn => fn(props));
+  }
+  const bootstrap = createDeffer('bootstrap');
+  const mount = createDeffer('mount');
+  const unmount = createDeffer('unmount');
+  const update = createDeffer('update');
+
+  ;(global => {
+    global.qiankunName = 'skybox-base';
+    global['skybox-base'] = {
+      bootstrap,
+      mount,
+      unmount,
+      update
+    };
+  })(window);
+</script></body></html>

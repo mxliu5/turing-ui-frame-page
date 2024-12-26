@@ -1,0 +1,1 @@
+import{_ as e}from"./index-f30f1b4a.js";import{o as _,p as o}from"./vendor-47c5f7a7.js";const t={},s={class:"page404"};function c(a,p,n,r,d,i){return _(),o("div",s," 404:// 没有找到当前页面！ ")}const m=e(t,[["render",c],["__scopeId","data-v-c5221781"]]);export{m as default};
