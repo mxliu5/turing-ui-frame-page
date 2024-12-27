@@ -25,6 +25,12 @@
                     "name": "插槽自定义查询项",
                     "icon": "",
                     "sort": 3
+                },
+                {
+                    "url": "/mock-demo4",
+                    "name": "含有tab的列表页",
+                    "icon": "",
+                    "sort": 4
                 }
             ]
         }
