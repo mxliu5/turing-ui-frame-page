@@ -1,0 +1,1 @@
+import{_ as e}from"./index-c0c00086.js";import{o as t,p as o}from"./vendor-fa3ed480.js";const c={},r={style:{padding:"24px"}};function n(s,_){return t(),o("div",r," 这是详情页的详情页 ")}const i=e(c,[["render",n]]);export{i as default};
